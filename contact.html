@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CodeJuan Web Services</title>
+    <meta name="description"
+        content="Get a free quote for your web development project. Contact CodeJuan Web Services to discuss your business website needs.">
+
+    <link rel="canonical" href="https://services.codejuan.com/contact.html">
+
+    <meta property="og:title" content="Contact Us - CodeJuan Web Services">
+    <meta property="og:description" content="Get a free quote for your web development project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://services.codejuan.com/contact.html">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">CodeJuan</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="work.html" class="nav-link">Our Work</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link cta-button">Get a Quote</a></li>
+                    <li>
+                        <div class="theme-selector">
+                            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pricing-hero">
+            <div class="container">
+                <h1 class="pricing-hero-title">Get Your Free Quote</h1>
+                <p class="pricing-hero-subtitle">Tell me about your project and I'll respond within 24 hours</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" style="padding-top: 4rem;">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Build Something Great</h3>
+                        <p>
+                            Whether you need a simple landing page or a full e-commerce store, I'm here to help. Tell me
+                            about your business and goals, and I'll put together a plan that fits your budget.
+                        </p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:contact@codejuan.com">contact@codejuan.com</a>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-clock"></i>
+                                <span style="color: var(--text-light);">Response time: within 24 hours</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-shield-alt"></i>
+                                <span style="color: var(--text-light);">Free quote, no obligation</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--text-color); margin-bottom: 0.75rem;">What happens next?</h4>
+                            <ol style="color: var(--text-light); padding-left: 1.25rem; line-height: 1.8;">
+                                <li>I review your project details</li>
+                                <li>We schedule a free discovery call</li>
+                                <li>I send you a detailed proposal</li>
+                                <li>Once approved, we start building</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form method="post" action="https://api.codejuan.com/api/contact">
+                            <!-- Honeypot -->
+                            <input type="text" name="company_website" style="display: none;" tabindex="-1"
+                                autocomplete="off">
+
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Project Type</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a project type...</option>
+                                    <option value="Basic Website ($750)">Basic Website ($750)</option>
+                                    <option value="Starter Website ($1,500)">Starter Website ($1,500)</option>
+                                    <option value="Professional Website ($3,500)">Professional Website ($3,500)</option>
+                                    <option value="Premium Commerce ($7,500)">Premium Commerce ($7,500)</option>
+                                    <option value="Custom / Web App ($10,000+)">Custom / Web App ($10,000+)</option>
+                                    <option value="Maintenance Plan">Maintenance Plan Only</option>
+                                    <option value="Other">Other / Not Sure</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell me about your project *</label>
+                                <textarea id="message" name="message"
+                                    placeholder="What does your business do? What do you need the website to accomplish? Any specific features or pages you have in mind?"
+                                    rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send My Free Quote
+                                Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CodeJuan Web Services</h3>
+                    <p>Professional web development for small businesses. Fast, modern, and built to convert.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pages</h4>
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="work.html">Our Work</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Juan Contreras. All rights reserved.</p>
+                <p>Built by Juan Contreras &mdash; <a href="https://codejuan.com" target="_blank">See full
+                        portfolio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

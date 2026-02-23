@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - CodeJuan Web Services</title>
+    <meta name="description"
+        content="Common questions about web development pricing, timelines, ownership, hosting, and maintenance. Get clear answers before starting your project.">
+
+    <link rel="canonical" href="https://services.codejuan.com/faq.html">
+
+    <meta property="og:title" content="FAQ - CodeJuan Web Services">
+    <meta property="og:description" content="Common questions about web development, pricing, and ownership.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://services.codejuan.com/faq.html">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">CodeJuan</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="work.html" class="nav-link">Our Work</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link cta-button">Get a Quote</a></li>
+                    <li>
+                        <div class="theme-selector">
+                            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pricing-hero">
+            <div class="container">
+                <h1 class="pricing-hero-title">Frequently Asked Questions</h1>
+                <p class="pricing-hero-subtitle">Everything you need to know before starting your project</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-subtitle">Can't find your answer? <a href="contact.html"
+                        style="color: var(--primary-color);">Contact me directly</a>.</p>
+
+                <div class="faq-grid">
+                    <div class="faq-item animate-in">
+                        <h4>Who owns my domain and website?</h4>
+                        <p>You do. The client retains full ownership of all website code, design, content, and domain
+                            upon final payment. All credentials, accounts, and source code will be transferred or made
+                            accessible within 7 days of project completion. See our <a href="terms.html"
+                                style="color: var(--primary-color);">Terms of Service</a> for full details.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>How does domain registration work?</h4>
+                        <p>You have three options: (1) Purchase it yourself and give me DNS access, (2) I guide you
+                            through buying it in your name on a screen-share, or (3) I purchase it during development
+                            and transfer it to you after final payment. Option 2 is the most common and easiest for most
+                            clients.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>What's included in "hosting setup"?</h4>
+                        <p>I set up your website on a reliable hosting platform and handle all technical configuration
+                            including DNS, SSL certificate, and performance optimization. The first year of hosting is
+                            included in your package price.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>How long does it take to build my website?</h4>
+                        <p>Timeline depends on your plan: Basic (~1 week), Starter (1&ndash;2 weeks), Professional
+                            (2&ndash;3 weeks), Premium Commerce (3&ndash;4 weeks). This includes design, development,
+                            testing, and launch. Timeline assumes timely feedback and content delivery.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>What does "3 months free maintenance" mean?</h4>
+                        <p>Every build comes with 3 months of maintenance at the matching tier &mdash; completely free.
+                            This covers security updates, backups, uptime monitoring, and content changes. After month 3,
+                            you can continue at the monthly rate or let it lapse. Most clients continue because the value
+                            is clear by then.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>Do you provide content writing?</h4>
+                        <p>The Basic plan requires you to provide all text and images. Starter plans include content
+                            structuring and polish (up to 500 words per page, 1 content revision). Professional and
+                            Premium plans include SEO-optimized content rewrite (up to 800 words per page). Full
+                            copywriting from scratch is available as an add-on for $150 per page.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>What if I need changes after launch?</h4>
+                        <p>Your included maintenance plan covers monthly content changes (30 min to 5 hours depending on
+                            plan). For changes beyond your plan's monthly allowance, additional work is billed at $95/hr
+                            with your written approval.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>Can I upgrade my plan later?</h4>
+                        <p>Absolutely. You can upgrade to a higher plan at any time. The upgrade cost will be the
+                            difference between your current plan and the new plan, with a revised timeline.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>What happens if I go over the revision limit?</h4>
+                        <p>Each plan includes a specific number of revision rounds (1&ndash;5 depending on tier).
+                            Additional revisions are billed at $95/hour with written approval before work begins.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>How does payment work?</h4>
+                        <p>50% non-refundable deposit to schedule the project, remaining 50% due before launch. Invoices
+                            are due within 7 days. Late payments may pause work and delay your launch date.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>What if I need e-commerce?</h4>
+                        <p>The Premium Commerce plan ($7,500) includes Stripe payment processing, a product catalog (up
+                            to 50 products), order notifications, and shipping/tax configuration. For complex e-commerce
+                            needs (custom inventory, marketplace features), we'd scope that through a paid discovery
+                            session under the Custom tier.</p>
+                    </div>
+
+                    <div class="faq-item animate-in">
+                        <h4>Do you build web applications?</h4>
+                        <p>Yes. The Custom / Web App tier ($10,000+) covers bespoke backends, user auth systems,
+                            dashboards, and complex integrations. These projects start with a paid discovery session
+                            ($500&ndash;$1,000) where I gather requirements, create an architecture plan, and deliver a
+                            fixed-price proposal. The discovery fee is credited toward the build if you proceed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Still Have Questions?</h2>
+                <p>I'm happy to chat about your project. No pressure, no commitment.</p>
+                <a href="contact.html" class="btn btn-large">Ask Me Anything</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CodeJuan Web Services</h3>
+                    <p>Professional web development for small businesses. Fast, modern, and built to convert.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pages</h4>
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="work.html">Our Work</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Juan Contreras. All rights reserved.</p>
+                <p>Built by Juan Contreras &mdash; <a href="https://codejuan.com" target="_blank">See full
+                        portfolio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who owns my domain and website?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You do. The client retains full ownership of all website code, design, content, and domain upon final payment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to build my website?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Basic (~1 week), Starter (1-2 weeks), Professional (2-3 weeks), Premium Commerce (3-4 weeks)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does 3 months free maintenance mean?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Every build comes with 3 months of maintenance at the matching tier, completely free. This covers security updates, backups, uptime monitoring, and content changes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does payment work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "50% non-refundable deposit to schedule the project, remaining 50% due before launch."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+
+</html>
