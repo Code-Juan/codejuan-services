@@ -214,7 +214,7 @@ body {
 .theme-toggle .fa-moon { opacity: 0; }
 
 [data-theme="dark"] .theme-toggle .fa-sun { opacity: 0; }
-[data-theme="dark"] .theme-toggle .fa-moon { opacity: 1; }
+[data-theme="dark"] .theme-toggle .fa-moon { opacity: 1; color: white; }
 
 /* Buttons */
 .btn {
