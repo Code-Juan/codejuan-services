@@ -72,25 +72,19 @@ function setActiveNavLink() {
 
 //contact form handling
 function initContactForm() {
-    const form = document.querySelector('.contact-form form');
+    const form = document.getElementById('contact-form');
     if (!form) return;
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
         const formData = new FormData(this);
-        const honeypot = formData.get('company_website');
-
-        //check honeypot (spam protection)
-        if (honeypot) {
-            console.log('Spam detected');
-            return;
-        }
-
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+        const name = (formData.get('name') || '').trim();
+        const email = (formData.get('email') || '').trim();
+        const phone = (formData.get('phone') || '').trim();
+        const service = (formData.get('service') || '').trim();
+        const message = (formData.get('message') || '').trim();
+        const company_website = formData.get('company_website') || '';
 
         if (!name || !email || !message) {
             showNotification('Please fill in all required fields.', 'error');
@@ -108,23 +102,34 @@ function initContactForm() {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        //submit to VPS backend
+        //submit to API backend
         fetch(this.action, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, subject, message })
+            body: JSON.stringify({ name, email, phone, service, message, company_website })
         })
         .then(response => {
             if (response.ok) {
                 showNotification('Thank you! I\'ll get back to you within 24 hours.', 'success');
                 this.reset();
-            } else {
-                throw new Error('Submission failed');
+                return;
             }
+
+            return response.json().catch(() => ({})).then(data => {
+                if (response.status === 503) {
+                    showNotification(data.error || 'Contact form is temporarily unavailable. Please email contact@codejuan.com directly.', 'error');
+                } else if (response.status === 400) {
+                    showNotification(data.error || 'Please check your details and try again.', 'error');
+                } else if (response.status === 429) {
+                    showNotification('Too many requests. Please wait a moment and try again.', 'error');
+                } else {
+                    showNotification('There was an error. Please try again or email contact@codejuan.com', 'error');
+                }
+            });
         })
         .catch(error => {
             console.error('Error:', error);
-            showNotification('There was an error. Please try again or email me directly at contact@codejuan.com', 'error');
+            showNotification('There was an error. Please try again or email contact@codejuan.com', 'error');
         })
         .finally(() => {
             submitBtn.textContent = originalText;
@@ -144,14 +149,22 @@ function showNotification(message, type = 'info') {
 
     const notification = document.createElement('div');
     notification.className = 'notification';
+    notification.setAttribute('aria-live', 'polite');
     notification.style.background = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6';
 
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span>${message}</span>
-            <button class="notification-close">&times;</button>
-        </div>
-    `;
+    const content = document.createElement('div');
+    content.className = 'notification-content';
+
+    const messageSpan = document.createElement('span');
+    messageSpan.textContent = message;
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'notification-close';
+    closeButton.innerHTML = '&times;';
+
+    content.appendChild(messageSpan);
+    content.appendChild(closeButton);
+    notification.appendChild(content);
 
     document.body.appendChild(notification);
 

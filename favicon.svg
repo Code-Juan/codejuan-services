@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" shape-rendering="crispEdges">
+<rect width="64" height="64" rx="11.52" fill="#0D1022"/>
+<rect x="12.10" y="25.37" width="17.687" height="4.422" fill="#F5F5F5"/>
+<rect x="7.68" y="29.79" width="4.422" height="4.422" fill="#F5F5F5"/>
+<rect x="7.68" y="34.21" width="4.422" height="4.422" fill="#F5F5F5"/>
+<rect x="7.68" y="38.63" width="4.422" height="4.422" fill="#F5F5F5"/>
+<rect x="12.10" y="43.05" width="17.687" height="4.422" fill="#F5F5F5"/>
+<rect x="38.63" y="16.52" width="17.687" height="4.422" fill="#E52A2B"/>
+<rect x="47.48" y="20.95" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="47.48" y="25.37" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="47.48" y="29.79" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="34.21" y="34.21" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="47.48" y="34.21" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="34.21" y="38.63" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="47.48" y="38.63" width="4.422" height="4.422" fill="#E52A2B"/>
+<rect x="38.63" y="43.05" width="8.844" height="4.422" fill="#E52A2B"/>
+</svg>

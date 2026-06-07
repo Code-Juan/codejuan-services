@@ -883,6 +883,15 @@ section {
     min-height: 120px;
 }
 
+/* Honeypot (spam protection) -- visually hidden, off-screen */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /* Full Pricing Page Styles */
 .pricing-hero {
     padding: 2rem 0 3rem 0;
