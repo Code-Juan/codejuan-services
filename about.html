@@ -1,218 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About - CodeJuan Web Services</title><meta name="description" content="Learn about CodeJuan Web Services. Professional web development for small businesses, built with care by Juan Contreras."><meta name="author" content="Juan Contreras"><link rel="canonical" href="https://services.codejuan.com/about.html"><meta property="og:title" content="About - CodeJuan Web Services"><meta property="og:description" content="Professional web development for small businesses, built with care."><meta property="og:type" content="website"><meta property="og:url" content="https://services.codejuan.com/about.html"><meta property="og:image" content="https://services.codejuan.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="About - CodeJuan Web Services"><meta name="twitter:description" content="Professional web development for small businesses, built with care."><meta name="twitter:image" content="https://services.codejuan.com/og-image.png"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- set theme + motion before paint; dark is the default, continuity with the old key --><script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem('services-theme');
+        } catch (e) {}
+        if (stored === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - CodeJuan Web Services</title>
-    <meta name="description"
-        content="Learn about CodeJuan Web Services. Professional web development for small businesses, built with care by Juan Contreras.">
-
-    <link rel="canonical" href="https://services.codejuan.com/about.html">
-
-    <meta property="og:title" content="About - CodeJuan Web Services">
-    <meta property="og:description"
-        content="Professional web development for small businesses, built with care.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://services.codejuan.com/about.html">
-    <meta property="og:image" content="https://services.codejuan.com/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://services.codejuan.com/og-image.png">
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-    <div class="main-content">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="index.html">CodeJuan</a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="work.html" class="nav-link">Our Work</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="contact.html" class="nav-link cta-button">Get a Quote</a></li>
-                    <li>
-                        <div class="theme-selector">
-                            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero -->
-        <section class="pricing-hero">
-            <div class="container">
-                <h1 class="pricing-hero-title">About CodeJuan</h1>
-                <p class="pricing-hero-subtitle">Building websites that work as hard as the businesses they represent
-                </p>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section class="about-section" style="padding-top: 4rem;">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2 style="color: var(--text-color); font-size: 2rem; margin-bottom: 1.5rem;">Hi, I'm Juan
-                            Contreras</h2>
-                        <p>
-                            I'm a software developer who specializes in building websites for small businesses. My
-                            background in game development and systems programming gives me a unique perspective -
-                            I care deeply about performance, clean code, and building things that actually work.
-                        </p>
-                        <p>
-                            I started CodeJuan Web Services because I saw too many small businesses getting overcharged
-                            for mediocre websites, or stuck with template builders that all look the same. Every business
-                            is unique, and your website should reflect that.
-                        </p>
-                        <p>
-                            My approach is simple: understand your business, build something fast and beautiful, and make
-                            sure it actually brings you customers. No bloated templates, no hidden fees, no confusing
-                            contracts. Just clean, professional websites that get results.
-                        </p>
-                    </div>
-                    <div class="about-image-area">
-                        <div class="about-photo">
-                            <i class="fas fa-user"></i>
-                            <p>Juan Contreras</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Values -->
-                <div class="about-values" style="margin-top: 4rem;">
-                    <div class="value-card animate-in">
-                        <i class="fas fa-bolt"></i>
-                        <h4>Speed</h4>
-                        <p>Every site scores 90+ on Lighthouse. Fast loading means better SEO and happier visitors.</p>
-                    </div>
-                    <div class="value-card animate-in">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>Ownership</h4>
-                        <p>You own everything - domain, code, hosting. No lock-in, ever.</p>
-                    </div>
-                    <div class="value-card animate-in">
-                        <i class="fas fa-comments"></i>
-                        <h4>Communication</h4>
-                        <p>You see progress at every step. No surprises, no radio silence.</p>
-                    </div>
-                    <div class="value-card animate-in">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h4>Transparency</h4>
-                        <p>Clear pricing with defined scope. You know exactly what you're getting.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process -->
-        <section class="process-section">
-            <div class="container">
-                <h2 class="section-title">My Process</h2>
-                <p class="section-subtitle">A clear, structured approach to every project</p>
-
-                <div class="process-grid">
-                    <div class="process-step animate-in">
-                        <div class="step-icon"><i class="fas fa-phone"></i></div>
-                        <h3>1. Discovery</h3>
-                        <p>We start with a free call to understand your business, goals, and what you need. I'll
-                            recommend the right plan and give you a clear timeline.</p>
-                    </div>
-                    <div class="process-step animate-in">
-                        <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
-                        <h3>2. Design</h3>
-                        <p>I create a mockup based on your brand and feedback. You approve the direction before any code
-                            is written.</p>
-                    </div>
-                    <div class="process-step animate-in">
-                        <div class="step-icon"><i class="fas fa-code"></i></div>
-                        <h3>3. Build</h3>
-                        <p>I develop your site with clean, performant code. You get regular updates and can provide
-                            feedback throughout.</p>
-                    </div>
-                    <div class="process-step animate-in">
-                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                        <h3>4. Launch</h3>
-                        <p>After final review, your site goes live. Domain, hosting, SSL - everything is set up
-                            and ready. 3 months of free maintenance starts now.</p>
-                    </div>
-                    <div class="process-step animate-in">
-                        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>5. Grow</h3>
-                        <p>With ongoing maintenance, I keep your site fast, secure, and up to date. Monthly reports show
-                            you how your site is performing.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ready to Work Together?</h2>
-                <p>Let's discuss your project. Free consultation, no strings attached.</p>
-                <a href="contact.html" class="btn btn-large">Start the Conversation</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>CodeJuan Web Services</h3>
-                    <p>Professional web development for small businesses. Fast, modern, and built to convert.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <a href="index.html">Home</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="work.html">Our Work</a>
-                    <a href="about.html">About</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="terms.html">Terms of Service</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Juan Contreras. All rights reserved.</p>
-                <p>Built by Juan Contreras - <a href="https://codejuan.com" target="_blank" rel="noopener noreferrer">See full
-                        portfolio</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25fb6c946af84f7faee1562d5176967d"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-
-</html>
+        var motion = null;
+        try {
+          motion = localStorage.getItem('motion');
+        } catch (e) {}
+        if (motion !== 'full' && motion !== 'reduced') {
+          motion =
+            window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduced' : 'full';
+        }
+        document.documentElement.setAttribute('data-motion', motion);
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.SXl2Zu7o.css">
+<style>.page-header[data-astro-cid-kh7btl4r]{padding:4.5rem 0 3rem;border-bottom:1px solid var(--border);background:radial-gradient(ellipse 60% 50% at 70% 20%,var(--accent-soft),transparent),var(--bg)}.page-title[data-astro-cid-kh7btl4r]{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.12}.page-subtitle[data-astro-cid-kh7btl4r]{color:var(--text-muted);font-size:1.1rem;margin-top:1.25rem;max-width:560px}.story-grid[data-astro-cid-kh7btl4r]{margin-top:1.5rem;max-width:760px}.story-body[data-astro-cid-kh7btl4r]{max-width:720px}.story-body[data-astro-cid-kh7btl4r] p[data-astro-cid-kh7btl4r]{color:var(--text-muted);font-size:1.05rem}.story-body[data-astro-cid-kh7btl4r] p[data-astro-cid-kh7btl4r]+p[data-astro-cid-kh7btl4r]{margin-top:1.25rem}.values[data-astro-cid-kh7btl4r]{background:var(--bg-raised);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.values-grid[data-astro-cid-kh7btl4r]{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}.value-card[data-astro-cid-kh7btl4r]{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color .2s ease,transform .2s ease}.value-card[data-astro-cid-kh7btl4r]:hover{border-color:var(--border-strong);transform:translateY(-3px)}.value-card[data-astro-cid-kh7btl4r] h3[data-astro-cid-kh7btl4r]{font-size:1.15rem}.value-card[data-astro-cid-kh7btl4r] p[data-astro-cid-kh7btl4r]{color:var(--text-muted);font-size:.97rem;margin-top:.5rem}.process-grid[data-astro-cid-kh7btl4r]{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}.step[data-astro-cid-kh7btl4r]{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color .2s ease}.step[data-astro-cid-kh7btl4r]:hover{border-color:var(--border-strong)}.step-number[data-astro-cid-kh7btl4r]{font-family:var(--mono);font-weight:700;color:var(--red);font-size:.95rem}.step[data-astro-cid-kh7btl4r] h3[data-astro-cid-kh7btl4r]{margin:.7rem 0 .5rem;font-size:1.15rem}.step[data-astro-cid-kh7btl4r] p[data-astro-cid-kh7btl4r]{color:var(--text-muted);font-size:.97rem}.cta-panel[data-astro-cid-kh7btl4r]{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:3.5rem 2rem;background:radial-gradient(ellipse 50% 80% at 50% 0%,var(--accent-soft),transparent),var(--surface)}.cta-panel[data-astro-cid-kh7btl4r] p[data-astro-cid-kh7btl4r]{color:var(--text-muted);margin:.9rem 0 1.75rem}@media(max-width:1000px){.values-grid[data-astro-cid-kh7btl4r]{grid-template-columns:repeat(2,1fr)}}@media(max-width:880px){.process-grid[data-astro-cid-kh7btl4r]{grid-template-columns:1fr}}@media(max-width:560px){.values-grid[data-astro-cid-kh7btl4r]{grid-template-columns:1fr}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="navbar" data-astro-cid-dmqpwcec> <div class="container nav-container" data-astro-cid-dmqpwcec> <a href="/index.html" class="nav-logo" aria-label="codeJuan home" data-astro-cid-dmqpwcec> <span class="wordmark" aria-label="codeJuan" data-astro-cid-hhuuaa7r> <span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&lt;</span><span class="code" data-astro-cid-hhuuaa7r>code</span><span class="juan" data-astro-cid-hhuuaa7r>Juan</span><span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&gt;</span> </span>  </a> <nav class="nav-menu" id="nav-menu" aria-label="Main navigation" data-astro-cid-dmqpwcec> <ul data-astro-cid-dmqpwcec> <li data-astro-cid-dmqpwcec> <a href="/index.html" class="nav-link" data-astro-cid-dmqpwcec> Home </a> </li><li data-astro-cid-dmqpwcec> <a href="/pricing.html" class="nav-link" data-astro-cid-dmqpwcec> Pricing </a> </li><li data-astro-cid-dmqpwcec> <a href="/work.html" class="nav-link" data-astro-cid-dmqpwcec> Our Work </a> </li><li data-astro-cid-dmqpwcec> <a href="/about.html" class="nav-link" aria-current="page" data-astro-cid-dmqpwcec> About </a> </li><li data-astro-cid-dmqpwcec> <a href="/faq.html" class="nav-link" data-astro-cid-dmqpwcec> FAQ </a> </li> <li data-astro-cid-dmqpwcec> <a href="/contact.html" class="btn btn-primary nav-cta" data-astro-cid-dmqpwcec>Get a Quote</a> </li> <li data-astro-cid-dmqpwcec> <button id="motion-toggle" class="theme-toggle" type="button" aria-pressed="true" aria-label="Turn off animations" data-astro-cid-dmqpwcec> <svg class="motion-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-dmqpwcec> <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" data-astro-cid-dmqpwcec></polygon> </svg> </button> </li> <li data-astro-cid-dmqpwcec> <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme" data-astro-cid-dmqpwcec> <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-dmqpwcec> <circle cx="12" cy="12" r="4" data-astro-cid-dmqpwcec></circle> <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4" data-astro-cid-dmqpwcec></path> </svg> <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-dmqpwcec> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" data-astro-cid-dmqpwcec></path> </svg> </button> </li> </ul> </nav> <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu" data-astro-cid-dmqpwcec> <span class="bar" data-astro-cid-dmqpwcec></span> <span class="bar" data-astro-cid-dmqpwcec></span> <span class="bar" data-astro-cid-dmqpwcec></span> </button> </div> </header>  <main id="main">   <section class="page-header" data-astro-cid-kh7btl4r> <div class="container" data-astro-cid-kh7btl4r> <span class="eyebrow" data-astro-cid-kh7btl4r>// about</span> <h1 class="page-title" data-astro-cid-kh7btl4r>About CodeJuan</h1> <p class="page-subtitle" data-astro-cid-kh7btl4r>Building websites that work as hard as the businesses they represent</p> </div> </section>  <section class="section story" data-astro-cid-kh7btl4r> <div class="container" data-astro-cid-kh7btl4r> <h2 class="section-title" data-astro-cid-kh7btl4r>Hi, I'm Juan Contreras</h2> <div class="story-grid" data-astro-cid-kh7btl4r> <div class="story-body" data-astro-cid-kh7btl4r> <p data-astro-cid-kh7btl4r>
+I'm a software developer who specializes in building websites for small businesses. My background in game
+            development and systems programming gives me a unique perspective - I care deeply about performance, clean
+            code, and building things that actually work.
+</p> <p data-astro-cid-kh7btl4r>
+I started CodeJuan Web Services because I saw too many small businesses getting overcharged for mediocre
+            websites, or stuck with template builders that all look the same. Every business is unique, and your website
+            should reflect that.
+</p> <p data-astro-cid-kh7btl4r>
+My approach is simple: understand your business, build something fast and beautiful, and make sure it
+            actually brings you customers. No bloated templates, no hidden fees, no confusing contracts. Just clean,
+            professional websites that get results.
+</p> </div> </div> </div> </section>  <section class="section values" data-astro-cid-kh7btl4r> <div class="container" data-astro-cid-kh7btl4r> <span class="eyebrow" data-astro-cid-kh7btl4r>// what I value</span> <h2 class="section-title" data-astro-cid-kh7btl4r>What guides every project</h2> <div class="values-grid" data-astro-cid-kh7btl4r> <div class="value-card reveal" data-astro-cid-kh7btl4r> <h3 data-astro-cid-kh7btl4r>Speed</h3> <p data-astro-cid-kh7btl4r>Every site scores 90+ on Lighthouse. Fast loading means better SEO and happier visitors.</p> </div><div class="value-card reveal" data-astro-cid-kh7btl4r> <h3 data-astro-cid-kh7btl4r>Ownership</h3> <p data-astro-cid-kh7btl4r>You own everything - domain, code, hosting. No lock-in, ever.</p> </div><div class="value-card reveal" data-astro-cid-kh7btl4r> <h3 data-astro-cid-kh7btl4r>Communication</h3> <p data-astro-cid-kh7btl4r>You see progress at every step. No surprises, no radio silence.</p> </div><div class="value-card reveal" data-astro-cid-kh7btl4r> <h3 data-astro-cid-kh7btl4r>Transparency</h3> <p data-astro-cid-kh7btl4r>Clear pricing with defined scope. You know exactly what you&#39;re getting.</p> </div> </div> </div> </section>  <section class="section process" data-astro-cid-kh7btl4r> <div class="container" data-astro-cid-kh7btl4r> <span class="eyebrow" data-astro-cid-kh7btl4r>// my process</span> <h2 class="section-title" data-astro-cid-kh7btl4r>My Process</h2> <p class="section-subtitle" data-astro-cid-kh7btl4r>A clear, structured approach to every project</p> <div class="process-grid" data-astro-cid-kh7btl4r> <div class="step reveal" data-astro-cid-kh7btl4r> <span class="step-number" data-astro-cid-kh7btl4r>01</span> <h3 data-astro-cid-kh7btl4r>Discovery</h3> <p data-astro-cid-kh7btl4r>We start with a free call to understand your business, goals, and what you need. I&#39;ll recommend the right plan and give you a clear timeline.</p> </div><div class="step reveal" data-astro-cid-kh7btl4r> <span class="step-number" data-astro-cid-kh7btl4r>02</span> <h3 data-astro-cid-kh7btl4r>Design</h3> <p data-astro-cid-kh7btl4r>I create a mockup based on your brand and feedback. You approve the direction before any code is written.</p> </div><div class="step reveal" data-astro-cid-kh7btl4r> <span class="step-number" data-astro-cid-kh7btl4r>03</span> <h3 data-astro-cid-kh7btl4r>Build</h3> <p data-astro-cid-kh7btl4r>I develop your site with clean, performant code. You get regular updates and can provide feedback throughout.</p> </div><div class="step reveal" data-astro-cid-kh7btl4r> <span class="step-number" data-astro-cid-kh7btl4r>04</span> <h3 data-astro-cid-kh7btl4r>Launch</h3> <p data-astro-cid-kh7btl4r>After final review, your site goes live. Domain, hosting, SSL - everything is set up and ready. 3 months of free maintenance starts now.</p> </div><div class="step reveal" data-astro-cid-kh7btl4r> <span class="step-number" data-astro-cid-kh7btl4r>05</span> <h3 data-astro-cid-kh7btl4r>Grow</h3> <p data-astro-cid-kh7btl4r>With ongoing maintenance, I keep your site fast, secure, and up to date. Monthly reports show you how your site is performing.</p> </div> </div> </div> </section>  <section class="section cta-section" data-astro-cid-kh7btl4r> <div class="container cta-panel reveal" data-astro-cid-kh7btl4r> <span class="eyebrow" data-astro-cid-kh7btl4r>$ start --today</span> <h2 class="section-title" data-astro-cid-kh7btl4r>Ready to Work Together?</h2> <p data-astro-cid-kh7btl4r>Let's discuss your project. Free consultation, no strings attached.</p> <a href="/contact.html" class="btn btn-primary btn-large" data-astro-cid-kh7btl4r>Start the Conversation</a> </div> </section>  </main> <footer class="footer" data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-grid" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <span class="wordmark" aria-label="codeJuan" data-astro-cid-hhuuaa7r> <span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&lt;</span><span class="code" data-astro-cid-hhuuaa7r>code</span><span class="juan" data-astro-cid-hhuuaa7r>Juan</span><span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&gt;</span> </span>  <p data-astro-cid-sz7xmlte>Professional web development for small businesses. Fast, modern, and built to convert.</p> </div> <div class="footer-links" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Pages</h4> <a href="/index.html" data-astro-cid-sz7xmlte>Home</a> <a href="/pricing.html" data-astro-cid-sz7xmlte>Pricing</a> <a href="/work.html" data-astro-cid-sz7xmlte>Our Work</a> <a href="/about.html" data-astro-cid-sz7xmlte>About</a> <a href="/faq.html" data-astro-cid-sz7xmlte>FAQ</a> <a href="/contact.html" data-astro-cid-sz7xmlte>Contact</a> </div> <div class="footer-links" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Legal</h4> <a href="/terms.html" data-astro-cid-sz7xmlte>Terms of Service</a> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>&copy; 2026 Juan Contreras. All rights reserved.</p> <p data-astro-cid-sz7xmlte>
+Built by Juan Contreras - <a href="https://codejuan.com" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>See full portfolio</a> </p> </div> </div> </footer>  <script type="module">const o=document.getElementById("theme-toggle");if(o){const t=e=>{e?document.documentElement.setAttribute("data-theme","light"):document.documentElement.removeAttribute("data-theme"),o.setAttribute("aria-pressed",String(e)),o.setAttribute("aria-label",e?"Switch to dark theme":"Switch to light theme")};t(document.documentElement.getAttribute("data-theme")==="light"),o.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")!=="light";t(e);try{localStorage.setItem("services-theme",e?"light":"dark")}catch{}})}const i=document.getElementById("motion-toggle");if(i){const t=e=>{document.documentElement.setAttribute("data-motion",e?"full":"reduced"),i.setAttribute("aria-pressed",String(e)),i.setAttribute("aria-label",e?"Turn off animations":"Turn on animations")};t(document.documentElement.getAttribute("data-motion")!=="reduced"),i.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-motion")==="reduced";t(e);try{localStorage.setItem("motion",e?"full":"reduced")}catch{}})}const r=document.getElementById("hamburger"),c=document.getElementById("nav-menu");r&&c&&r.addEventListener("click",()=>{const t=c.classList.toggle("open");r.setAttribute("aria-expanded",String(t)),r.setAttribute("aria-label",t?"Close menu":"Open menu")});const a=document.querySelectorAll(".reveal");if(a.length&&"IntersectionObserver"in window){const t=new IntersectionObserver(e=>{e.forEach(n=>{n.isIntersecting&&(n.target.classList.add("visible"),t.unobserve(n.target))})},{threshold:.12});a.forEach(e=>t.observe(e))}else a.forEach(t=>t.classList.add("visible"));</script> <!-- Cloudflare Web Analytics --> <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;25fb6c946af84f7faee1562d5176967d&quot;}"></script> </body> </html> 

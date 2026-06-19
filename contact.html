@@ -1,186 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us - CodeJuan Web Services</title><meta name="description" content="Get a free quote for your web development project. Contact CodeJuan Web Services to discuss your business website needs."><meta name="author" content="Juan Contreras"><link rel="canonical" href="https://services.codejuan.com/contact.html"><meta property="og:title" content="Contact Us - CodeJuan Web Services"><meta property="og:description" content="Get a free quote for your web development project."><meta property="og:type" content="website"><meta property="og:url" content="https://services.codejuan.com/contact.html"><meta property="og:image" content="https://services.codejuan.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact Us - CodeJuan Web Services"><meta name="twitter:description" content="Get a free quote for your web development project."><meta name="twitter:image" content="https://services.codejuan.com/og-image.png"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><!-- set theme + motion before paint; dark is the default, continuity with the old key --><script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem('services-theme');
+        } catch (e) {}
+        if (stored === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CodeJuan Web Services</title>
-    <meta name="description"
-        content="Get a free quote for your web development project. Contact CodeJuan Web Services to discuss your business website needs.">
-
-    <link rel="canonical" href="https://services.codejuan.com/contact.html">
-
-    <meta property="og:title" content="Contact Us - CodeJuan Web Services">
-    <meta property="og:description" content="Get a free quote for your web development project.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://services.codejuan.com/contact.html">
-    <meta property="og:image" content="https://services.codejuan.com/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://services.codejuan.com/og-image.png">
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-    <div class="main-content">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="index.html">CodeJuan</a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="work.html" class="nav-link">Our Work</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="contact.html" class="nav-link cta-button">Get a Quote</a></li>
-                    <li>
-                        <div class="theme-selector">
-                            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero -->
-        <section class="pricing-hero">
-            <div class="container">
-                <h1 class="pricing-hero-title">Get Your Free Quote</h1>
-                <p class="pricing-hero-subtitle">Tell me about your project and I'll respond within 24 hours</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" style="padding-top: 4rem;">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Let's Build Something Great</h3>
-                        <p>
-                            Whether you need a simple landing page or a full e-commerce store, I'm here to help. Tell me
-                            about your business and goals, and I'll put together a plan that fits your budget.
-                        </p>
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:contact@codejuan.com">contact@codejuan.com</a>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fas fa-clock"></i>
-                                <span style="color: var(--text-light);">Response time: within 24 hours</span>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fas fa-shield-alt"></i>
-                                <span style="color: var(--text-light);">Free quote, no obligation</span>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color);">
-                            <h4 style="color: var(--text-color); margin-bottom: 0.75rem;">What happens next?</h4>
-                            <ol style="color: var(--text-light); padding-left: 1.25rem; line-height: 1.8;">
-                                <li>I review your project details</li>
-                                <li>We schedule a free discovery call</li>
-                                <li>I send you a detailed proposal</li>
-                                <li>Once approved, we start building</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contact-form" action="https://api.codejuan.com/api/contact/services" method="post">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" autocomplete="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" autocomplete="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone (optional)</label>
-                                <input type="tel" id="phone" name="phone" autocomplete="tel">
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service</label>
-                                <select id="service" name="service">
-                                    <option value="">Select a service (optional)</option>
-                                    <option value="Basic Website">Basic Website</option>
-                                    <option value="Starter Website">Starter Website</option>
-                                    <option value="Professional Website">Professional Website</option>
-                                    <option value="Premium Commerce">Premium Commerce</option>
-                                    <option value="Custom Project">Custom Project</option>
-                                    <option value="Maintenance Plan">Maintenance Plan</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <div class="honeypot-field" aria-hidden="true">
-                                <label for="company_website">Company website</label>
-                                <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; text-align: center;">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>CodeJuan Web Services</h3>
-                    <p>Professional web development for small businesses. Fast, modern, and built to convert.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <a href="index.html">Home</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="work.html">Our Work</a>
-                    <a href="about.html">About</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="terms.html">Terms of Service</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Juan Contreras. All rights reserved.</p>
-                <p>Built by Juan Contreras - <a href="https://codejuan.com" target="_blank" rel="noopener noreferrer">See full
-                        portfolio</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "25fb6c946af84f7faee1562d5176967d"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-
-</html>
+        var motion = null;
+        try {
+          motion = localStorage.getItem('motion');
+        } catch (e) {}
+        if (motion !== 'full' && motion !== 'reduced') {
+          motion =
+            window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduced' : 'full';
+        }
+        document.documentElement.setAttribute('data-motion', motion);
+      })();
+    </script><link rel="stylesheet" href="/_astro/about.SXl2Zu7o.css">
+<style>.page-header[data-astro-cid-uw5kdbxl]{padding:4rem 0 2.5rem;border-bottom:1px solid var(--border);background:radial-gradient(ellipse 60% 50% at 70% 20%,var(--accent-soft),transparent),var(--bg)}.page-header[data-astro-cid-uw5kdbxl] .section-title[data-astro-cid-uw5kdbxl],.page-header[data-astro-cid-uw5kdbxl] .section-subtitle[data-astro-cid-uw5kdbxl]{margin-top:.75rem}.contact-grid[data-astro-cid-uw5kdbxl]{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}.contact-info[data-astro-cid-uw5kdbxl] h2[data-astro-cid-uw5kdbxl]{font-size:1.5rem;letter-spacing:-.02em}.contact-info[data-astro-cid-uw5kdbxl]>p[data-astro-cid-uw5kdbxl]{color:var(--text-muted);margin-top:.9rem;font-size:1rem}.contact-methods[data-astro-cid-uw5kdbxl]{list-style:none;margin:1.75rem 0 0;display:flex;flex-direction:column;gap:.9rem}.contact-methods[data-astro-cid-uw5kdbxl] li[data-astro-cid-uw5kdbxl]{display:flex;align-items:center;gap:.65rem;color:var(--text-muted);font-size:.97rem}.contact-methods[data-astro-cid-uw5kdbxl] svg[data-astro-cid-uw5kdbxl]{color:var(--red);flex-shrink:0}.contact-methods[data-astro-cid-uw5kdbxl] a[data-astro-cid-uw5kdbxl]{color:var(--text);text-decoration:none}.contact-methods[data-astro-cid-uw5kdbxl] a[data-astro-cid-uw5kdbxl]:hover{color:var(--red)}.next-steps[data-astro-cid-uw5kdbxl]{margin-top:2rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.next-steps[data-astro-cid-uw5kdbxl] h3[data-astro-cid-uw5kdbxl]{font-size:1.05rem;margin-bottom:.75rem}.next-steps[data-astro-cid-uw5kdbxl] ol[data-astro-cid-uw5kdbxl]{color:var(--text-muted);padding-left:1.25rem;line-height:1.8;margin:0}.contact-form-wrap[data-astro-cid-uw5kdbxl]{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem}.form-group[data-astro-cid-uw5kdbxl]{margin-bottom:1.25rem}.form-group[data-astro-cid-uw5kdbxl] label[data-astro-cid-uw5kdbxl]{display:block;font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.45rem}.form-group[data-astro-cid-uw5kdbxl] input[data-astro-cid-uw5kdbxl],.form-group[data-astro-cid-uw5kdbxl] select[data-astro-cid-uw5kdbxl],.form-group[data-astro-cid-uw5kdbxl] textarea[data-astro-cid-uw5kdbxl]{width:100%;background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-family:var(--sans);font-size:.97rem;padding:.7rem .85rem;transition:border-color .2s ease}.form-group[data-astro-cid-uw5kdbxl] input[data-astro-cid-uw5kdbxl]:focus,.form-group[data-astro-cid-uw5kdbxl] select[data-astro-cid-uw5kdbxl]:focus,.form-group[data-astro-cid-uw5kdbxl] textarea[data-astro-cid-uw5kdbxl]:focus{outline:none;border-color:var(--red)}.form-group[data-astro-cid-uw5kdbxl] textarea[data-astro-cid-uw5kdbxl]{min-height:140px;resize:vertical}.form-submit[data-astro-cid-uw5kdbxl]{width:100%;text-align:center}.form-submit[data-astro-cid-uw5kdbxl]:disabled{opacity:.65;cursor:not-allowed}.honeypot-field[data-astro-cid-uw5kdbxl]{position:absolute;left:-9999px}.form-status[data-astro-cid-uw5kdbxl]{margin-top:1rem;font-size:.95rem;min-height:1.2em}.form-status[data-astro-cid-uw5kdbxl].success{color:var(--ok)}.form-status[data-astro-cid-uw5kdbxl].error{color:var(--red)}@media(max-width:880px){.contact-grid[data-astro-cid-uw5kdbxl]{grid-template-columns:1fr;gap:2.5rem}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="navbar" data-astro-cid-dmqpwcec> <div class="container nav-container" data-astro-cid-dmqpwcec> <a href="/index.html" class="nav-logo" aria-label="codeJuan home" data-astro-cid-dmqpwcec> <span class="wordmark" aria-label="codeJuan" data-astro-cid-hhuuaa7r> <span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&lt;</span><span class="code" data-astro-cid-hhuuaa7r>code</span><span class="juan" data-astro-cid-hhuuaa7r>Juan</span><span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&gt;</span> </span>  </a> <nav class="nav-menu" id="nav-menu" aria-label="Main navigation" data-astro-cid-dmqpwcec> <ul data-astro-cid-dmqpwcec> <li data-astro-cid-dmqpwcec> <a href="/index.html" class="nav-link" data-astro-cid-dmqpwcec> Home </a> </li><li data-astro-cid-dmqpwcec> <a href="/pricing.html" class="nav-link" data-astro-cid-dmqpwcec> Pricing </a> </li><li data-astro-cid-dmqpwcec> <a href="/work.html" class="nav-link" data-astro-cid-dmqpwcec> Our Work </a> </li><li data-astro-cid-dmqpwcec> <a href="/about.html" class="nav-link" data-astro-cid-dmqpwcec> About </a> </li><li data-astro-cid-dmqpwcec> <a href="/faq.html" class="nav-link" data-astro-cid-dmqpwcec> FAQ </a> </li> <li data-astro-cid-dmqpwcec> <a href="/contact.html" class="btn btn-primary nav-cta" data-astro-cid-dmqpwcec>Get a Quote</a> </li> <li data-astro-cid-dmqpwcec> <button id="motion-toggle" class="theme-toggle" type="button" aria-pressed="true" aria-label="Turn off animations" data-astro-cid-dmqpwcec> <svg class="motion-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-dmqpwcec> <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" data-astro-cid-dmqpwcec></polygon> </svg> </button> </li> <li data-astro-cid-dmqpwcec> <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme" data-astro-cid-dmqpwcec> <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-dmqpwcec> <circle cx="12" cy="12" r="4" data-astro-cid-dmqpwcec></circle> <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4" data-astro-cid-dmqpwcec></path> </svg> <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-dmqpwcec> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" data-astro-cid-dmqpwcec></path> </svg> </button> </li> </ul> </nav> <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu" data-astro-cid-dmqpwcec> <span class="bar" data-astro-cid-dmqpwcec></span> <span class="bar" data-astro-cid-dmqpwcec></span> <span class="bar" data-astro-cid-dmqpwcec></span> </button> </div> </header>  <main id="main">   <section class="page-header" data-astro-cid-uw5kdbxl> <div class="container" data-astro-cid-uw5kdbxl> <span class="eyebrow" data-astro-cid-uw5kdbxl>// contact</span> <h1 class="section-title" data-astro-cid-uw5kdbxl>Get Your Free Quote</h1> <p class="section-subtitle" data-astro-cid-uw5kdbxl>Tell me about your project and I'll respond within 24 hours</p> </div> </section>  <section class="section contact" data-astro-cid-uw5kdbxl> <div class="container" data-astro-cid-uw5kdbxl> <div class="contact-grid" data-astro-cid-uw5kdbxl> <div class="contact-info reveal" data-astro-cid-uw5kdbxl> <h2 data-astro-cid-uw5kdbxl>Let's Build Something Great</h2> <p data-astro-cid-uw5kdbxl>
+Whether you need a simple landing page or a full e-commerce store, I'm here to help. Tell me
+            about your business and goals, and I'll put together a plan that fits your budget.
+</p> <ul class="contact-methods" data-astro-cid-uw5kdbxl> <li data-astro-cid-uw5kdbxl> <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-uw5kdbxl> <rect x="2" y="4" width="20" height="16" rx="2" data-astro-cid-uw5kdbxl></rect> <path d="m22 7-10 6L2 7" data-astro-cid-uw5kdbxl></path> </svg> <a href="mailto:contact@codejuan.com" data-astro-cid-uw5kdbxl>contact@codejuan.com</a> </li> <li data-astro-cid-uw5kdbxl> <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-uw5kdbxl> <circle cx="12" cy="12" r="9" data-astro-cid-uw5kdbxl></circle> <path d="M12 7v5l3 2" data-astro-cid-uw5kdbxl></path> </svg> <span data-astro-cid-uw5kdbxl>Response time: within 24 hours</span> </li> <li data-astro-cid-uw5kdbxl> <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-uw5kdbxl> <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" data-astro-cid-uw5kdbxl></path> </svg> <span data-astro-cid-uw5kdbxl>Free quote, no obligation</span> </li> </ul> <div class="next-steps" data-astro-cid-uw5kdbxl> <h3 data-astro-cid-uw5kdbxl>What happens next?</h3> <ol data-astro-cid-uw5kdbxl> <li data-astro-cid-uw5kdbxl>I review your project details</li><li data-astro-cid-uw5kdbxl>We schedule a free discovery call</li><li data-astro-cid-uw5kdbxl>I send you a detailed proposal</li><li data-astro-cid-uw5kdbxl>Once approved, we start building</li> </ol> </div> </div> <div class="contact-form-wrap reveal" data-astro-cid-uw5kdbxl> <form id="contact-form" action="https://api.codejuan.com/api/contact/services" method="post" novalidate data-astro-cid-uw5kdbxl> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="name" data-astro-cid-uw5kdbxl>Name</label> <input type="text" id="name" name="name" autocomplete="name" required data-astro-cid-uw5kdbxl> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="email" data-astro-cid-uw5kdbxl>Email</label> <input type="email" id="email" name="email" autocomplete="email" required data-astro-cid-uw5kdbxl> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="phone" data-astro-cid-uw5kdbxl>Phone (optional)</label> <input type="tel" id="phone" name="phone" autocomplete="tel" data-astro-cid-uw5kdbxl> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="service" data-astro-cid-uw5kdbxl>Service</label> <select id="service" name="service" data-astro-cid-uw5kdbxl> <option value="" data-astro-cid-uw5kdbxl>Select a service (optional)</option> <option value="Basic Website" data-astro-cid-uw5kdbxl>Basic Website</option><option value="Starter Website" data-astro-cid-uw5kdbxl>Starter Website</option><option value="Professional Website" data-astro-cid-uw5kdbxl>Professional Website</option><option value="Premium Commerce" data-astro-cid-uw5kdbxl>Premium Commerce</option><option value="Custom Project" data-astro-cid-uw5kdbxl>Custom Project</option><option value="Maintenance Plan" data-astro-cid-uw5kdbxl>Maintenance Plan</option><option value="Other" data-astro-cid-uw5kdbxl>Other</option> </select> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="message" data-astro-cid-uw5kdbxl>Message</label> <textarea id="message" name="message" required data-astro-cid-uw5kdbxl></textarea> </div> <div class="honeypot-field" aria-hidden="true" data-astro-cid-uw5kdbxl> <label for="company_website" data-astro-cid-uw5kdbxl>Company website</label> <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" data-astro-cid-uw5kdbxl> </div> <button type="submit" class="btn btn-primary btn-large form-submit" data-astro-cid-uw5kdbxl>Send Message</button> <p id="form-status" class="form-status" aria-live="polite" data-astro-cid-uw5kdbxl></p> </form> </div> </div> </div> </section>  </main> <footer class="footer" data-astro-cid-sz7xmlte> <div class="container" data-astro-cid-sz7xmlte> <div class="footer-grid" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <span class="wordmark" aria-label="codeJuan" data-astro-cid-hhuuaa7r> <span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&lt;</span><span class="code" data-astro-cid-hhuuaa7r>code</span><span class="juan" data-astro-cid-hhuuaa7r>Juan</span><span class="bracket" aria-hidden="true" data-astro-cid-hhuuaa7r>&gt;</span> </span>  <p data-astro-cid-sz7xmlte>Professional web development for small businesses. Fast, modern, and built to convert.</p> </div> <div class="footer-links" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Pages</h4> <a href="/index.html" data-astro-cid-sz7xmlte>Home</a> <a href="/pricing.html" data-astro-cid-sz7xmlte>Pricing</a> <a href="/work.html" data-astro-cid-sz7xmlte>Our Work</a> <a href="/about.html" data-astro-cid-sz7xmlte>About</a> <a href="/faq.html" data-astro-cid-sz7xmlte>FAQ</a> <a href="/contact.html" data-astro-cid-sz7xmlte>Contact</a> </div> <div class="footer-links" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Legal</h4> <a href="/terms.html" data-astro-cid-sz7xmlte>Terms of Service</a> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>&copy; 2026 Juan Contreras. All rights reserved.</p> <p data-astro-cid-sz7xmlte>
+Built by Juan Contreras - <a href="https://codejuan.com" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>See full portfolio</a> </p> </div> </div> </footer>  <script type="module">const o=document.getElementById("theme-toggle");if(o){const t=e=>{e?document.documentElement.setAttribute("data-theme","light"):document.documentElement.removeAttribute("data-theme"),o.setAttribute("aria-pressed",String(e)),o.setAttribute("aria-label",e?"Switch to dark theme":"Switch to light theme")};t(document.documentElement.getAttribute("data-theme")==="light"),o.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")!=="light";t(e);try{localStorage.setItem("services-theme",e?"light":"dark")}catch{}})}const i=document.getElementById("motion-toggle");if(i){const t=e=>{document.documentElement.setAttribute("data-motion",e?"full":"reduced"),i.setAttribute("aria-pressed",String(e)),i.setAttribute("aria-label",e?"Turn off animations":"Turn on animations")};t(document.documentElement.getAttribute("data-motion")!=="reduced"),i.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-motion")==="reduced";t(e);try{localStorage.setItem("motion",e?"full":"reduced")}catch{}})}const r=document.getElementById("hamburger"),c=document.getElementById("nav-menu");r&&c&&r.addEventListener("click",()=>{const t=c.classList.toggle("open");r.setAttribute("aria-expanded",String(t)),r.setAttribute("aria-label",t?"Close menu":"Open menu")});const a=document.querySelectorAll(".reveal");if(a.length&&"IntersectionObserver"in window){const t=new IntersectionObserver(e=>{e.forEach(n=>{n.isIntersecting&&(n.target.classList.add("visible"),t.unobserve(n.target))})},{threshold:.12});a.forEach(e=>t.observe(e))}else a.forEach(t=>t.classList.add("visible"));</script> <!-- Cloudflare Web Analytics --> <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;25fb6c946af84f7faee1562d5176967d&quot;}"></script> </body> </html>  <script type="module">const r=document.getElementById("contact-form"),o=document.getElementById("form-status");function y(a){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a)}function t(a,e){o&&(o.textContent=a,o.classList.remove("success","error"),o.classList.add(e))}r&&o&&r.addEventListener("submit",a=>{a.preventDefault();const e=new FormData(r),c=String(e.get("name")||"").trim(),i=String(e.get("email")||"").trim(),u=String(e.get("phone")||"").trim(),d=String(e.get("service")||"").trim(),l=String(e.get("message")||"").trim(),g=String(e.get("company_website")||"");if(!c||!i||!l){t("Please fill in all required fields.","error");return}if(!y(i)){t("Please enter a valid email address.","error");return}const n=r.querySelector('button[type="submit"]'),f=n.textContent;n.textContent="Sending...",n.disabled=!0,fetch(r.action,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:c,email:i,phone:u,service:d,message:l,company_website:g})}).then(s=>{if(s.ok){t("Thank you! I'll get back to you within 24 hours.","success"),r.reset();return}return s.json().catch(()=>({})).then(m=>{s.status===503?t(m.error||"Contact form is temporarily unavailable. Please email contact@codejuan.com directly.","error"):s.status===400?t(m.error||"Please check your details and try again.","error"):s.status===429?t("Too many requests. Please wait a moment and try again.","error"):t("There was an error. Please try again or email contact@codejuan.com","error")})}).catch(()=>{t("There was an error. Please try again or email contact@codejuan.com","error")}).finally(()=>{n.textContent=f,n.disabled=!1})});</script>
